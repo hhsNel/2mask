@@ -5,7 +5,7 @@
 
 #define ALLOC_GRAN 32
 
-void handle_frame(FILE *frame, char *frameignore, char *stdinignore);
+int handle_frame(FILE *frame, char *frameignore, char *stdinignore);
 
 int main(int argc, char **argv) {
 	int start, i, end;
@@ -15,29 +15,70 @@ int main(int argc, char **argv) {
 	char *stdinignore = "\r\t\n";
 	char *filename;
 	int noclear = 0;
+	int displaylast = 0;
 	unsigned int length;
 	FILE *frame;
 
 	if(argc < 4) {
-		printf("usage: %s <start> <end> <frame format string> [fps] [frameignore] [stdinigore] [noclear]\n"
+		printf("usage: %s <start> <end> <frame format string> [OPTIONS...]\n"
 				"default:\n"
-				"fps        \t=\t30\n"
-				"frameignore\t=\t\" \"\n"
-				"stdinignore\t=\t\"\\r\\t\\n\"\n"
-				"noclear    \t=\t0\n", argv[0]);
+				"-p \tfps                         \t=\t30\n"
+				"-f \tframeignore                 \t=\t\" \"\n"
+				"-s \tstdinignore                 \t=\t\"\\r\\t\\n\"\n"
+				"-c \tclear                       \t*\n"
+				"-C \tno clear (can help with laggy inputs)\n"
+				"-d \tdisplay last frame\n"
+				"-D \tdon't display the last frame\t*\n", argv[0]);
 		exit(0);
 	}
 
 	start = atoi(argv[1]);
 	end = atoi(argv[2]);
 	format = argv[3];
-	if(argc >= 5) fps = atoi(argv[4]);
-	if(argc >= 6) frameignore = argv[5];
-	if(argc >= 7) stdinignore = argv[6];
-	if(argc >= 8) noclear = atoi(argv[7]);
+
+	for(i = 4; i < argc; ++i) {
+		if(argv[i][0] == '-') {
+			switch(argv[i][1]) {
+#define REQUIRE_ANOTHER if(i + 1 >= argc) { printf("expected another argument after %s\n", argv[i]); exit(1); }
+				case 'p':
+					REQUIRE_ANOTHER;
+					fps = atoi(argv[i + 1]);
+					++i;
+					break;
+				case 'f':
+					REQUIRE_ANOTHER;
+					frameignore = argv[i + 1];
+					++i;
+					break;
+				case 's':
+					REQUIRE_ANOTHER;
+					frameignore = argv[i + 1];
+					++i;
+					break;
+				case 'c':
+					noclear = 0;
+					break;
+				case 'C':
+					noclear = 1;
+					break;
+				case 'D':
+					displaylast = 0;
+					break;
+				case 'd':
+					displaylast = 1;
+					break;
+#undef REQUIRE_ANOTHER
+			}
+		} else {
+			printf("unrecognized option: %s\n", argv[i]);
+			exit(1);
+		}
+	}
 
 	length = snprintf(NULL, 0, format, end);
 	filename = malloc(length + 1);
+
+	printf("\e[2J");
 
 	for(i = start; i <= end; ++i) {
 		sprintf(filename, format, i);
@@ -46,18 +87,23 @@ int main(int argc, char **argv) {
 			printf("error opening %s\n", filename);
 			exit(1);
 		}
-		handle_frame(frame, frameignore, stdinignore);
+		if(handle_frame(frame, frameignore, stdinignore)) {
+			if(displaylast) {
+				printf("\e[2J\e[HLast frame: %i\n", i);
+			}
+			exit(0);
+		}
 		fclose(frame);
+		fflush(stdout);
 		usleep(1000000 / fps);
 		if(! noclear) {
 			printf("\e[2J");
 		}
 		printf("\e[H");
-		fflush(stdout);
 	}
 }
 
-void
+int
 handle_frame(FILE *frame, char *frameignore, char *stdinignore)
 {
 	unsigned int xcap, ycap, width, height, i, j, k;
@@ -99,7 +145,7 @@ handle_frame(FILE *frame, char *frameignore, char *stdinignore)
 				do {
 					c = getchar();
 				} while (c != EOF && strchr(stdinignore, c));
-				if(c == EOF) exit(0);
+				if(c == EOF) return 1;;
 
 				putchar(c);
 			} else {
@@ -110,5 +156,7 @@ handle_frame(FILE *frame, char *frameignore, char *stdinignore)
 		putchar('\n');
 	}
 	free(framedump);
+
+	return 0;
 }
 
