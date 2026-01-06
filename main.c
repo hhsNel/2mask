@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
 					break;
 				case 's':
 					REQUIRE_ANOTHER;
-					frameignore = argv[i + 1];
+					stdinignore = argv[i + 1];
 					++i;
 					break;
 				case 'c':
