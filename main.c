@@ -12,17 +12,19 @@ int main(int argc, char **argv) {
 	char *format;
 	unsigned int fps = 30;
 	char *frameignore = " ";
-	char *stdinignore = "\t\n";
+	char *stdinignore = "\r\t\n";
 	char *filename;
+	int noclear = 0;
 	unsigned int length;
 	FILE *frame;
 
 	if(argc < 4) {
-		printf("usage: %s <start> <end> <frame format string> [fps] [frameignore] [stdinigore]\n"
+		printf("usage: %s <start> <end> <frame format string> [fps] [frameignore] [stdinigore] [noclear]\n"
 				"default:\n"
 				"fps        \t=\t30\n"
 				"frameignore\t=\t\" \"\n"
-				"stdinignore\t=\t\"\\t\\n\"\n", argv[0]);
+				"stdinignore\t=\t\"\\r\\t\\n\"\n"
+				"noclear    \t=\t0\n", argv[0]);
 		exit(0);
 	}
 
@@ -31,7 +33,8 @@ int main(int argc, char **argv) {
 	format = argv[3];
 	if(argc >= 5) fps = atoi(argv[4]);
 	if(argc >= 6) frameignore = argv[5];
-	if(argc >= 7) frameignore = argv[6];
+	if(argc >= 7) stdinignore = argv[6];
+	if(argc >= 8) noclear = atoi(argv[7]);
 
 	length = snprintf(NULL, 0, format, end);
 	filename = malloc(length + 1);
@@ -46,7 +49,11 @@ int main(int argc, char **argv) {
 		handle_frame(frame, frameignore, stdinignore);
 		fclose(frame);
 		usleep(1000000 / fps);
-		printf("\e[2J\e[H");
+		if(! noclear) {
+			printf("\e[2J");
+		}
+		printf("\e[H");
+		fflush(stdout);
 	}
 }
 
