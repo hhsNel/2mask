@@ -1,0 +1,24 @@
+             .OMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMX;            :
+           ,kWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0c          '
+         :KMMMMWWNNXXXXNNWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWd.       .
+       ;XMWXOdc;'........,;ldOXNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWo       
+     .kXkc'.                  .'lONMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMX,     
+    .kc.                          'oKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo    
+   .;                               .dNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMx   
+                                      ;XMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo  
+                   .....               ;NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM' 
+ .               ,kXNNNKx'              xMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0 
+..              .NMMMMMMMK              :MMMMMMMMMMMMMMMMWWWWMMMMMMMMMMMMMMMMMM.
+d                oKWMMMWX:              dMMMMMMMMMMMMMWOl;,';lkNMMMMMMMMMMMMMMM'
+X                 .'::;'                WMMMMMMMMMMMMW,        ,NMMMMMMMMMMMMMM;
+W'                                     .WMMMMMMMMMMMMX         .WMMMMMMMMMMMMMWo
+Mx                                      kMMMMMMMMMMMMWk;.    .;0MMMMMMMMMMMMMMON
+MW.                                     .0MMMMMMMMMMMMMWX0OOKNMMMMMMMMMMMMMMMNKM
+MMK                                      .kWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0OMM
+MMM0                                      .c0WMMMMMMMMMMMMMMMMMMMMMMMMMMMW0cdMMM
+MMMMK.                                      .:kXWMMMMMMMMMMMMMMMMMMMMMWXx,.xMMMM
+WMMMMN:                                        .:dOKNWMMMMMMMMMMMWNKOo;. .KMMMMM
+KMMMMMMO.                                          ..,:lodxxxdol:,..    dWMMMMMM
+kWMMMMMMMk'                                                          .oWMMMMMMMM
+oXMMMMMMMMMKc                                                      ,kWMMMMMMMMMM
+cOWMMMMMMMMMMWc                                                  .KMMMMMMMMMMMMM

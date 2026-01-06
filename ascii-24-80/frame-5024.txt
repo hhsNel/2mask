@@ -1,0 +1,24 @@
+MMMMMMM:           0MMMMx                                ,MMMMMMMMMMMMMMMMMMMMMM
+MMMMMMW,            xMMMW'                               KMMMMMMMMMMMMMMMMMMMMMM
+MMMMMN'             ,cKMMWl                            'XMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMX0             dMMMMMMK;                        'kMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMx             .WMMMMMMMNd,.                .;dXMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMo              oMMMMMMMMMMMNOdc,.       ckXMMMMMMMMMMMMMMOxkOKNWWWMMMMMMMM
+MMMMMM; ,d           .WMMMMMMMMMMMMMMMM:     :MMMMMMMMMMMMMMMNkl.        .,:o0NM
+MMMMMW. ''            dMMMMMMMMMMMMMMMMN.   .xMMMMMMMMMMMNk:                    
+MMMMM. ..             .WMMMMMMMMMMMMMMMMW,NMMMMMMMMMMMMX:                       
+MMMMO  0Mx             0MMMMMMMMMMMMMMMMMMMMMMMMWKMMMMO.                        
+MMMM: .cx.             xMMMMMMMMMMMMMMMMMMMMMMMW. .o0Xkc,                       
+MMMMl  .  cK.          .OMMMMMMMMMMMMMMMMMMMKdl.                                
+MMMM, 'K  0MN,           .cKMMMMMMMMMMMMMMMK                                    
+MMMM. ,c .NMMMo             .xWMMMMMMMMk...                                     
+MMM:      kMMMMX;              cXMMMMd.                                         
+MMK  xNX  kMMMMMM0'              ;KMMc                                          
+MMl .KMO .KMMMMMMMMO'              ,OMx                                         
+MMc   .  lMMMMMMMMMMM0;              'Od                                        
+MMx  c. :WMMMMMMMMMMMMMK;              '                                        
+MM, .X  xMMMMMMMMMMMMMMMMX:                                                     
+MM. .c  OMMMMMMMMMMMMMMMMMMNl                                                   
+M:      :WMMMMMMMMMMMMMMMMMMMNo.                                                
+X  oWM. :MMMMMMMMMMMMMMMMMMMMMMWx.                                              
+x  OMM  dMMMMMMMMMMMMMMMMMMMMMMMMMo                                             

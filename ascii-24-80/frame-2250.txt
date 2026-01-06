@@ -1,0 +1,24 @@
+     .NMMWKd,.                    .NMMMMMMMMMMK.                                
+      KMMMMMMWKx;.               oWMMMMMMMMMMMMX.                               
+     KMMMMMMMX;::oxkkxl;..     lNMMMMMMMMMMMMMMMx                               
+    OMMMMMMMK        .':lxOOkollckWMMMMMMMMMMNkc                                
+   cMMMMMMM0                 .,dNMMMMMMMMMMNx.                                  
+   NMMMMMMX                     .xWXMMMMMMMWN0xoc;'.                            
+  ;MMMMMMM'                         xMMMMMMMMMN:;coxkOOOkdooxo:.                
+  dMMMMMMK                         .KMMMMMMMMMM0        .,OMMMMN0KKOkdoc:;'..   
+  xMMMMMMl                         lMMMMMMMMMMMMX:':ldk0XNMMMKc    .';cok0XMMWNN
+  xMMMMMM'                        OMMNMMMMMMMMMWMMMMMMN0xo:'                .';c
+  cMMMMMM,                       'MMWOMMMMMMMMW'.;:,.                           
+   WMMMMMx                        .cOWMMMMMMMMM.                                
+   ;MMMMMM'                          ;MMMMMMMMMX'                               
+    cMMMMMX                        .kMMMMMMMMMMM0.                              
+     ;WMMMMO                    .c0MMMMMMMMMMMMMMNo.                            
+      lMMMMM.                ,dKWMMMMMMMMMMMMMMMMMMN;                           
+      :MMMW,             .lONMMMMMMMMMMMMMMMMMMMMMMN'                           
+      kMMM.          .:kXMMMMMMMMMMMMMMMMMMMMMMMMMMMK                           
+      lMMX         c0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMo                          
+       KMW.      ,NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW                          
+        xMK'     .dKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMd                ..,:lxOKN
+         .lkxc,:ONMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN,     ..,:coxOKXNWMMMMMMMM
+             oMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWKxOKXNWMMMMMMMMMMMMMMMMMMMM
+             lNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
