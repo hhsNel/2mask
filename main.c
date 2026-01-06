@@ -16,6 +16,7 @@ int main(int argc, char **argv) {
 	char *filename;
 	int noclear = 0;
 	int displaylast = 0;
+	int loop = 0;
 	unsigned int length;
 	FILE *frame;
 
@@ -28,7 +29,9 @@ int main(int argc, char **argv) {
 				"-c \tclear                       \t*\n"
 				"-C \tno clear (can help with laggy inputs)\n"
 				"-d \tdisplay last frame\n"
-				"-D \tdon't display the last frame\t*\n", argv[0]);
+				"-D \tdon't display the last frame\t*\n"
+				"-l \tloop\n"
+				"-L \tdon't loop                  \t*\n", argv[0]);
 		exit(0);
 	}
 
@@ -67,6 +70,12 @@ int main(int argc, char **argv) {
 				case 'd':
 					displaylast = 1;
 					break;
+				case 'l':
+					loop = 1;
+					break;
+				case 'L':
+					loop = 0;
+					break;
 #undef REQUIRE_ANOTHER
 			}
 		} else {
@@ -80,27 +89,29 @@ int main(int argc, char **argv) {
 
 	printf("\e[2J");
 
-	for(i = start; i <= end; ++i) {
-		sprintf(filename, format, i);
-		frame = fopen(filename, "rb");
-		if(!frame) {
-			printf("error opening %s\n", filename);
-			exit(1);
-		}
-		if(handle_frame(frame, frameignore, stdinignore)) {
-			if(displaylast) {
-				printf("\e[2J\e[HLast frame: %i\n", i);
+	do {
+		for(i = start; i <= end; ++i) {
+			sprintf(filename, format, i);
+			frame = fopen(filename, "rb");
+			if(!frame) {
+				printf("error opening %s\n", filename);
+				exit(1);
 			}
-			exit(0);
+			if(handle_frame(frame, frameignore, stdinignore)) {
+				if(displaylast) {
+					printf("\e[2J\e[HLast frame: %i\n", i);
+				}
+				exit(0);
+			}
+			fclose(frame);
+			fflush(stdout);
+			usleep(1000000 / fps);
+			if(! noclear) {
+				printf("\e[2J");
+			}
+			printf("\e[H");
 		}
-		fclose(frame);
-		fflush(stdout);
-		usleep(1000000 / fps);
-		if(! noclear) {
-			printf("\e[2J");
-		}
-		printf("\e[H");
-	}
+	} while(loop);
 }
 
 int
